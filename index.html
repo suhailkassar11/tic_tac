@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <header class="header">
+                <select style="border:none; border-bottom: 2px solid black; font-size: larger;">
+                    <option value="Easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                    <option value="unbeatable">Unbeatable</option>
+                </select>
+                <div class="buttons">
+                    <button onclick="choosePlayer('x')" class="button">X</button>
+                    <button onclick="choosePlayer('o')" class="button">o</button>
+                </div>
+            </header>
+            <div class="game">
+                <div class="tic">
+                    <table id="board">
+                        <tr>
+                          <td  onclick="handleClick(0,0)" class="cell"></td>
+                          <td onclick="handleClick(0,1)" class="vert cell"></td>
+                          <td onclick="handleClick(0,2)" class="cell"></td>
+                        </tr>
+                        <tr>
+                          <td onclick="handleClick(1,0)" class="hori cell"></td>
+                          <td onclick="handleClick(1,1)" class="vert hori cell"></td>
+                          <td onclick="handleClick(1,2)" class="hori cell"></td>
+                        </tr>
+                        <tr>
+                          <td  onclick="handleClick(2,0)"class="cell"></td>
+                          <td onclick="handleClick(2,1)" class="vert cell"></td>
+                          <td onclick="handleClick(2,2)" class="cell"></td>
+                        </tr>
+                      </table>
+                </div>
+            </div>
+            <div class="restart">
+                <button onclick="handleRestart()" class="button">RESTART</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
